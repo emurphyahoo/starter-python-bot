@@ -14,3 +14,9 @@ config:
     default: not secret though
 screenshots:
   - screenshot: resources/screenshot1.png
+  
+class SlackSlashHandler(BaseHandler):
+  def get(self):
+    
+    user_name = self.request.get("user_name")
+    self.response.out.write("Hello "+user_name)
