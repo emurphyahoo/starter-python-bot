@@ -14,3 +14,9 @@ config:
     default: not secret though
 screenshots:
   - screenshot: resources/screenshot1.png
+  
+token = “xoxb-63829397637-Vn4kHHtlHAwxnst2MfmOY5Of”
+sc = SlackClient(token)
+chan=”test”
+greeting=”Hello!\nNice to meet you.”
+print sc.api_call(“chat.postMessage”, as_user=”true:”, channel=chan, text=greeting)
